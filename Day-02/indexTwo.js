@@ -23,3 +23,27 @@ const targetWord = "on";
 const result = word1.includes(targetWord) && word2.includes(targetWord);
 
 console.log(result);
+
+// Task 6 I hope this course is not full of jargon. Check if jargon is in the sentence.
+let checkSentence = 'I hope this course is not full of jargon';
+console.log(checkSentence.includes('jargon'));
+
+// Task 7 Generate a random number between 0 and 100 inclusively.
+const numHundred = Math.floor(Math.random () * 101);
+console.log(numHundred);
+
+// Task 8 Generate a random number between 50 and 100 inclusively.
+const numFiftyToHundred = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
+console.log(numFiftyToHundred);
+
+// Task 9 Generate a random number between 0 and 255 inclusively.
+const numZeroToTwoHundredAndFiftyFive = Math.floor(Math.random() * 256);
+console.log(numZeroToTwoHundredAndFiftyFive);
+
+//Task 10 Access the 'JavaScript' string characters using a random number.
+const word = "JavaScript";
+const randomIndex = Math.floor(Math.random() * word.length);
+
+const randomCharacter = word[randomIndex];
+
+console.log(`Random character at index ${randomIndex}: ${randomCharacter}`);
