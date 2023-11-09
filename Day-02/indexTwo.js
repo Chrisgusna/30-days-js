@@ -47,3 +47,31 @@ const randomIndex = Math.floor(Math.random() * word.length);
 const randomCharacter = word[randomIndex];
 
 console.log(`Random character at index ${randomIndex}: ${randomCharacter}`);
+
+/*
+Task 11 Use console.log() and escape characters to print the following pattern.
+
+1 1 1 1 1
+2 1 2 4 8
+3 1 3 9 27
+4 1 4 16 64
+5 1 5 25 125
+*/
+console.log('1\t1\t1\t1\t1 \n2\t1\t2\t4\t8 \n3\t1\t3\t9\t27 \n4\t1\t4\t16\t64 \n5\t1\t5\t25\t125');
+
+// Task 12 Use substr to slice out the phrase because because because from the following sentence:'You cannot end a sentence with because because because is a conjunction'
+const phrase = 'You cannot end a sentence with because because because is a conjunction';
+console.log(phrase.substr(30, 24));
+
+// Another solution
+const sentence = 'You cannot end a sentence with because because because is a conjunction';
+const firstBecauseIndex = sentence.indexOf('because');
+const lastBecauseIndex = sentence.lastIndexOf('because');
+
+if (firstBecauseIndex !== -1 && lastBecauseIndex !== -1 && firstBecauseIndex !== lastBecauseIndex) {
+  const extractedPhrase = sentence.substr(firstBecauseIndex, lastBecauseIndex - firstBecauseIndex + 'because'.length);
+
+  console.log(extractedPhrase);
+} else {
+  console.log('The phrase "because because because" was not found in the sentence.');
+}
